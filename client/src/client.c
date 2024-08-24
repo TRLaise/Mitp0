@@ -14,8 +14,11 @@ int main(void)
 
 	/* ---------------- LOGGING ---------------- */
 
-	logger = iniciar_logger();
+	logger = log_create("tp0.log", "PrimerLog" , true, LOG_LEVEL_INFO);
 
+	log_info(logger, "Soy un log");
+
+	log_destroy(logger);
 	// Usando el logger creado previamente
 	// Escribi: "Hola! Soy un log"
 
