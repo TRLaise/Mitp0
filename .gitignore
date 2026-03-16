@@ -1,1 +1,12 @@
-/.metadata/
+# Bibliotecas externas
+so-commons-library/
+
+# Carpetas de compilación
+bin/
+obj/
+
+# Archivos de log
+*.log
+
+# Archivos temporales de edición
+.vscode/
