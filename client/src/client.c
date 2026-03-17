@@ -127,11 +127,11 @@ void paquete(int conexion)
 	do
 	{
 		leido = readline("Introduce un comando: ");
-		printf("Ingresaste: %s\n", leido;
+		printf("Ingresaste: %s\n", leido);
 		agregar_a_paquete(paquete,leido,strlen(leido)+1);
 
         // Liberamos la memoria alocada por readline
-	}while(strcmp(leido," "));
+	}while(strcmp(leido,""));
 
 	enviar_paquete(paquete,conexion);
 

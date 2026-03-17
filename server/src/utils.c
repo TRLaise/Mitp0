@@ -9,7 +9,7 @@ int iniciar_servidor(void)
 
 	int socket_servidor = -1;
 
-	struct addrinfo hints, *servinfo, *p;
+	struct addrinfo hints, *server_info, *p;
 
 	memset(&hints, 0, sizeof(hints));
 	hints.ai_family = AF_INET;
@@ -38,7 +38,7 @@ int iniciar_servidor(void)
 	// Escuchamos las conexiones entrantes
 	//int fd_conexion = accept(socket_servidor, NULL, NULL);
 
-	freeaddrinfo(servinfo);
+	freeaddrinfo(server_info);
 	log_trace(logger, "Listo para escuchar a mi cliente");
 
 	return socket_servidor;
@@ -47,7 +47,7 @@ int iniciar_servidor(void)
 int esperar_cliente(int socket_servidor)
 {
 	// Quitar esta línea cuando hayamos terminado de implementar la funcion
-	assert(!"no implementado!");
+	//assert(!"no implementado!");
 
 	// Aceptamos un nuevo cliente
 	int socket_cliente;
