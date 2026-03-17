@@ -33,9 +33,8 @@ int main(void)
 
 	log_info(logger, "Clave: %s", valor);
 
-	log_destroy(logger);
-
-	config_destroy(config);
+	//log_destroy(logger);
+	//config_destroy(config);
 	// Usando el config creado previamente, leemos los valores del config y los 
 	// dejamos en las variables 'ip', 'puerto' y 'valor'
 
@@ -59,6 +58,9 @@ int main(void)
 
 	// Armamos y enviamos el paquete
 	paquete(conexion);
+
+	log_info(logger, "Terminé de mandar todo. Espero 10 segundos antes de cerrar...");
+    sleep(10);
 
 	terminar_programa(conexion, logger, config);
 
@@ -91,7 +93,7 @@ void leer_consola(t_log* logger)
 		printf("Ingresaste: %s\n", input);
 
         // Liberamos la memoria alocada por readline
-	}while(strcmp(input," "));
+	}while(strcmp(input,""));
 
 	free(input);
 	
